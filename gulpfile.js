@@ -13,4 +13,14 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix.sass('app.scss');
+
+    mix.copy('node_modules/jquery/dist/jquery.js','resources/assets/js/vendors/jquery.js')
+    mix.copy('node_modules/bootstrap/dist/js/bootstrap.js','resources/assets/js/vendors/bootstrap.js')
+    mix.copy('node_modules/vue/dist/vue.js','resources/assets/js/vendors/vue.js')
+    
+    mix.scriptsIn('resources/js/vendors', 'public/js/vendors.js');
+
+    mix.version(['css/app.css','js/vendors.js']);
+
+    //mix.browserSync({'proxy':'tpartner.app'});
 });
