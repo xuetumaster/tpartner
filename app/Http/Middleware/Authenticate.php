@@ -21,6 +21,9 @@ class Authenticate
             if ($request->ajax() || $request->wantsJson()) {
                 return response('Unauthorized.', 401);
             } else {
+                if (strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false ) {
+                    return redirect()->guest(route('wechat.oauth'));
+                }
                 return redirect()->guest('login');
             }
         }

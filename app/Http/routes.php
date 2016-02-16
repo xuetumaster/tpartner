@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/wechat', 'WechatController@echoStr');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -27,5 +29,11 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+    Route::get('wechat/oauth',['as'=>'wechat.oauth','uses'=>'WechatController@oauth']);
+    Route::get('wechat/oauth/callback',['as'=>'wechat.callback','uses'=>'WechatController@oauthCallback']);
+
+    Route::group(['middleware' => ['auth']], function() {
+        Route::get('apply/partner', ['as' => 'apply.partner', 'uses' => 'UserController@applyPartner']);
+        Route::get('apply/member', ['as' => 'apply.member', 'uses' => 'UserController@applyMember']);
+    });
 });
