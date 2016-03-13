@@ -32,14 +32,25 @@ class OAuthController extends Controller
                 'form_params' => [
                     'client_id' =>config('github.clientID'),
                     'client_secret' => config('github.clientSecret'),
+                    'scope' => 'user',
                     'code' => $request->get('code'),
-                    'state'=> $request->get('state'),
+                    'state' => $request->get('state'),
                 ]
             ]);
-            $res->getStatusCode();
-            dd($res);
+            $jr = json_decode($res->getBody());
+            if (isset($jr['error']))
+            {
+                \Log::error($res->getBody());
+                return abort(500,'<a href="'.$jr['error_uri'].'">'.$jr['error_description'].'</a>');
+            } else {
+                $access_token = $jr['access_token'];
+                $res = $client->post('',
+                    [
+                        'headers' => ['Authorization'=>'token '.$access_token],
+                ]);
+            }
         } else {
-            abort(403,'Invalid github state');
+            return abort(403,'Invalid github state');
         };
     }
 }
