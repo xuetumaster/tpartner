@@ -12,7 +12,7 @@
     <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
 </head>
 
-<body class="swag-line">
+<body>
     <div class="container">
         <nav class="navbar navbar-default navbar-tall" role="navigation">
             <div class="navbar-header">
@@ -24,12 +24,6 @@
             <div class="collapse navbar-toggleable-sm" id="global-nav">
                 <ul class="nav navbar-nav"></ul>
                 <ul class="nav navbar-nav pull-md-right">
-                    <li class="nav-item">
-                        <a href="/register" class="nav-link">注册</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/login" class="nav-link">登入</a>
-                    </li>
                 </ul>
             </div>
         </nav>

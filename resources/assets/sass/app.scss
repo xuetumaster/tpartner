@@ -96,8 +96,8 @@ html[lang=zh-CN] body {
 
 .hero-booticon {
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-    border: 1px solid #6b15a1;
-    color: #6b15a1;
+    border: 1px solid #000;
+    color: #000;
     background-color: transparent;
     margin: 0 auto 30px;
     width: 144px;
@@ -109,26 +109,4 @@ html[lang=zh-CN] body {
     text-align: center;
     cursor: default;
     border-radius: 15%;
-}
-
-.row-bordered:before {
-    content: '';
-    display: block;
-    width: 80%;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    margin-left: -40%;
-    height: 1px;
-    background: -webkit-radial-gradient(center, ellipse, rgba(0,0,0,0.2) 0, rgba(255,255,255,0) 75%);
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0, rgba(255,255,255,0) 75%);
-}
-
-.panel-profile-img {
-    max-width: 100px;
-    margin-top: -70px;
-    margin-bottom: 5px;
-    border: 3px solid #fff;
-    border-radius: 100%;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }

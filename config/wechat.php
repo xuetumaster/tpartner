@@ -9,4 +9,5 @@ return [
     'appSecret' => env('WECHAT_APP_SECRET'),
     'token' => env('WECHAT_TOKEN'),
     'encodingAESKey' => env('WECHAT_ENCODING_AES_KEY'),
+    'callbackUrl' => env('WECHAT_CALLBACK_URL')
 ];

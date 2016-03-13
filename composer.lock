@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "baaf20a76ea8296b7cbfc9764542b84e",
-    "content-hash": "27a36a3d0dc31812f5f508e57b8d01fd",
+    "hash": "66f5a0e7206b5908debe3d5bd9cef2ff",
+    "content-hash": "e8a28f0bf4cbf1b406fc4c889da0bb0a",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -907,6 +907,52 @@
                 "php"
             ],
             "time": "2015-12-04 15:28:43"
+        },
+        {
+            "name": "overtrue/wechat",
+            "version": "2.1.33",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/overtrue/wechat.git",
+                "reference": "5ebbed92153bf2c9a125ae52dd5dd38d01a6a993"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://packagist.phpcomposer.com/files/overtrue/wechat/5ebbed92153bf2c9a125ae52dd5dd38d01a6a993.zip",
+                "reference": "5ebbed92153bf2c9a125ae52dd5dd38d01a6a993",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mcrypt": "*",
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Overtrue\\Wechat\\": "src/Wechat/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "overtrue",
+                    "email": "anzhengchao@gmail.com"
+                }
+            ],
+            "description": "微信SDK",
+            "keywords": [
+                "sdk",
+                "wechat",
+                "weixin",
+                "weixin-sdk"
+            ],
+            "time": "2016-02-01 03:26:39"
         },
         {
             "name": "paragonie/random_compat",

@@ -32,6 +32,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('wechat/oauth',['as'=>'wechat.oauth','uses'=>'WechatController@oauth']);
     Route::get('wechat/oauth/callback',['as'=>'wechat.callback','uses'=>'WechatController@oauthCallback']);
 
+    Route::get('oauth/github',['as' => 'oauth.github' ,'uses' => 'OAuthController@github']);
+    Route::get('oauth/github/callback', ['as' => 'oauth.github.callback', 'uses' => 'OAuthController@githubCallback']);
+
     Route::group(['middleware' => ['auth']], function() {
         Route::get('apply/partner', ['as' => 'apply.partner', 'uses' => 'UserController@applyPartner']);
         Route::get('apply/member', ['as' => 'apply.member', 'uses' => 'UserController@applyMember']);
